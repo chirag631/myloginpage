@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: "montserrat";
+    box-sizing: border-box;
+  }
+body{
+    
+    background: url("https://image.freepik.com/free-photo/old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-room-wall_1258-28312.jpg") no-repeat;
+    background-size: cover;
+}
+
+.middle{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.card{
+    cursor: pointer;
+    width: 340px;
+    height: 380px;
+    
+    
+  }
+.login-box,.back{
+    
+    
+    border-radius:3%;
+    border:2px solid #4caf50;
+    width: 100%;
+    height: 100%;
+    box-shadow:0px 0px 2px 2px #307932;
+    
+    color: white;
+    padding:50px;
+  
+    backdrop-filter: blur(2px);
+    overflow: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    transition: transform .6s linear;
+    
+}
+.login-box{
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.back{
+  
+    
+    transform: perspective(600px) rotateY(0deg);
+}
+.card:hover>.login-box{
+    
+    transform: perspective(600px) rotateY(0deg);
+  
+}
+.card:hover>.back{
+    transform: perspective(600px) rotateY(-180deg);
+}
+.login-box h1{
+    
+    float: left;
+    font-size: 40px;
+    border-bottom: 6px solid #4caf50;
+    margin-bottom: 13px;
+    padding:  13px 0;
+    
+
+}
+
+
+.back-content{
+  
+    color: #ffffff;
+  text-align: center;
+    width:100%;
+    margin-top: 50%;
+
+}
+
+
+
+.back-content h2{
+    transform: translateX(-160%);
+    animation:animate 2s ease-in-out forwards;  
+    float: left;
+    font-size: 40px;
+    border-bottom: 6px solid #4caf50;
+    
+}
+
+
+
+
+.login-box h1:hover{
+    border-bottom: 6px solid #c841d4;
+}
+
+.textbox{
+    width: 100%;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 8px 0;
+    border-bottom: 1px solid #4caf50;
+   
+}
+
+.textbox:hover{
+   
+    border-bottom: 1px solid #c841d4;
+}
+
+.textbox input{
+    
+    border: none;
+    outline: none;
+    background: none;
+    color:white;
+}
+
+button{
+    margin-top: 20px;
+    width: 100%;
+    color:white;
+    background-color: transparent;
+    border: 1px solid #4caf50;
+  
+}
+
+button:hover{
+    border: 1px solid #c841d4;
+}
+
+
+@keyframes animate{
+    100%{
+        transform: translateX(0);
+    }
+}
